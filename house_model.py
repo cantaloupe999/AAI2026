@@ -7,7 +7,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 # Read data from CSV file 
-df = pd.read_csv("ML basics.csv")
+df = pd.read_csv("ML_basics_updated_with_location_column.csv")
 # Features and target
 X = df[['square_footage', 'location']]
 y = df['price']
