@@ -30,8 +30,6 @@ new_house = pd.DataFrame({'SquareFeet': [2000], 'Location': ['Downtown']})
 predicted_price = model.predict(new_house)
 print(f"Predicted price for a 2000 sq ft house in Downtown: ${predicted_price[0]:,.2f}")
 # Display model coefficients
-feature_names = (model.named_steps['preprocessor']
-.named_transformers_['location']
 feature_names = (
     model.named_steps['preprocessor']
     .named_transformers_['location']
@@ -40,4 +38,4 @@ feature_names = (
 coefficients = model.named_steps['regressor'].coef_
 print("\nModel Coefficients:")
 for feature, coef in zip(feature_names, coefficients):
-print(f"{feature}: {coef:.2f}")
+    print(f"{feature}: {coef:.2f}")
