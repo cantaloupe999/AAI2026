@@ -6,15 +6,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
-# Generate sample data
-data = {
-'square_footage': [1500, 2000, 1800, 2500, 2200, 1700, 3000, 1900, 2100, 2600],
-'location': ['Downtown', 'Suburb', 'Downtown', 'Rural', 'Suburb', 'Downtown',
-'Rural', 'Suburb', 'Downtown', 'Rural'],
-'price': [300000, 350000, 320000, 280000, 360000, 310000, 400000, 340000,
-330000, 290000]
-}
-df = pd.DataFrame(data)
+# Read data from CSV file 
+df = pd.read_csv("ML basics.csv")
 # Features and target
 X = df[['square_footage', 'location']]
 y = df['price']
